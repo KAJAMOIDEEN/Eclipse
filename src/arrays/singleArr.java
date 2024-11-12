@@ -4,18 +4,30 @@ public class singleArr {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-       int[] arr = new int[5];// empty array of 5
+//       int[] arr = new int[6];// empty array of 5
+//       arr[0] = 10;
+//       arr[1] = 20;
+//       arr[2] = 30;
+//       arr[3] = 40;
+//       arr[4] = 50;
+//       arr[5] = 50;
+//       
+//       System.out.println(arr[5]);
        
-       int arrData[] = {1,2,3,4,5}; // arrData
+       
+       int arrData[] = {10,20,30,40,50,60}; // arrData
        
        int len = arrData.length;
-       System.out.println(arr.length);
+      // System.out.println(len);
        
-       for(int i=0;i<len;i++)
-       arr[i] = arrData[i];
-       
-       for(Integer data:arr) {
-    	   System.out.println(data);
+//       for(int i=0;i<len;i++)
+//       arr[i] = arrData[i];
+//       
+       for(int i=0;i<len;i++) {
+    	   System.out.println(arrData[i]);
+       }
+       for(Integer x:arrData) {
+    	   System.out.println(x);
        }
     	   
 	}
