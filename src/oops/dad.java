@@ -15,5 +15,11 @@ public class dad {
 	protected void show() {
 		System.out.println("show");
 	}
+	
+	public static void main(String[] args) {
+		dad obj = new dad();
+		obj.land1();
+	}
     
 }
+	

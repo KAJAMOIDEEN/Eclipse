@@ -30,7 +30,7 @@ public class PersonsComparator {
 	     });
 	   
 	   
-	   //sort by using lambda
+	  // sort by using lambda
 	   al.sort((o1,o2)->o1.getName().compareTo(o2.getName()));
 	   
 	   //using comparing

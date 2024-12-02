@@ -2,15 +2,17 @@ package oops;
 
 public class Main  {
 	public static void main(String args[]) {
+		//dad m = new child();
+		//m.show();
 		Encapsulation obj = new Encapsulation();
-		dad m = new child();
-		m.show();
-		obj.username = "kjm";
+		obj.username = "John";
+        obj.setPassword("098765");
 		
-		obj.setPassword("xyz");
+		System.out.println("User Name:"+obj.username+"\n"+"Password:"+obj.getPassword());
 		
-		String pass = obj.getPassword();
 		
-		System.out.println(obj.username + pass);
+		//String pass = obj.getPassword();
+		
+		//System.out.println(obj.username + pass);
 	}
 }

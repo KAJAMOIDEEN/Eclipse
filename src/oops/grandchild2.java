@@ -6,7 +6,9 @@ public class grandchild2 extends child {
 		// TODO Auto-generated method stub
       grandchild2 obj = new grandchild2();
       
+      obj.land1();
       obj.land2();
+      obj.land3();
 	}
 
 }

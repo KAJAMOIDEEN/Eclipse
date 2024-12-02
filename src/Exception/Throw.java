@@ -7,7 +7,7 @@ public class Throw {
   static void checkAge(int age){
     int sum=9;
     		if(sum==9)
-    			throw new NullPointerException();
+    			throw new NullPointerException("error");
   }
 
   public static void main(String[] args) {
