@@ -1,4 +1,4 @@
-package mthods;
+package methods;
 
 public class construc {
     

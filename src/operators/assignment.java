@@ -6,7 +6,7 @@ public class assignment {
 		// TODO Auto-generated method stub
         int x=5;
         // x += 4;
-         x &=4;  //x = 5 & 4
+         x +=4;  //x = 5 + 4
          //0101
          //0100
         //&0100 

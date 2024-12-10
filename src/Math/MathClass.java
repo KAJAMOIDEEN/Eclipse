@@ -1,4 +1,4 @@
-package mthods;
+package Math;
 
 public class MathClass {
 

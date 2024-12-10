@@ -7,8 +7,6 @@ public class login {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		
-		
 		System.out.println("Enter Your User Name:");
 		String userName = sc.nextLine();
 		System.out.println("Enter Your User Pin:");

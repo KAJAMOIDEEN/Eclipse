@@ -1,20 +1,16 @@
-package mthods;
+package methods;
 
 import java.math.BigInteger;
 
 public class math {
-	static int ab;
+	static int ab; // Global Scope
 	
 	
 	static int add(int a, int b) {
-		 ab=90;
-		System.out.println(sub(a,b));
-		System.out.println(mul(a,b));
-		System.out.println(div(a,b));
+		 //ab=90;
 		return a+b;
 	}
 	static int sub(int a, int b) {
-		ab =90;
 		return a-b;
 		
 	}
@@ -26,7 +22,7 @@ public class math {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int res = add(90,80);
+		double res = add(90,80);
        System.out.println(res);
        
 

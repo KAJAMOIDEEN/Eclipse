@@ -5,9 +5,8 @@ public class Operations {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
      int a = 90;
-     double d = (double)a;
      int b = 80;
-     double sqrt = Math.sqrt(d);
+     double sqrt = Math.sqrt(a);
      System.out.println(sqrt);
      System.out.println(Math.abs(sqrt));
      System.out.println(Math.ceil(sqrt));
@@ -17,7 +16,7 @@ public class Operations {
      System.out.println(Math.log(sqrt));
      System.out.println(Math.round(sqrt));
      
-     int otp = (int) (Math.random()*10000);
+     int otp = (int) (Math.random()*1000000);
      
      System.out.println(otp);
 	}

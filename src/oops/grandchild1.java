@@ -1,6 +1,6 @@
 package oops;
 
-public class grandchild1 implements landInfo,landInfo2{
+public class grandchild1 extends child implements landInfo,landInfo2{
 	
 	@Override
 	public void land6() {

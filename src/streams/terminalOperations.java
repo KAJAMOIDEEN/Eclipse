@@ -3,6 +3,7 @@ package streams;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -14,13 +15,23 @@ public class terminalOperations {
     	 System.out.println(res.get());
      }
 	 
-	 static void collect(List<Integer> ls) {
-		final List<Integer> res = ls.stream()
-		 .filter(x-> x%2 == 0)
-		 .map(x->x*x)
-		 .collect(Collectors.toList());
-	    
-		System.out.println(res);
+	 static void collect(List<Employee> ls) {
+		Map<String,List<Employee>> resGrp = ls.stream()
+		 .collect(Collectors.groupingBy(Employee::getGender));
+		
+		 resGrp.forEach(((str,data)->{
+			 System.out.println(str);
+			 data.forEach(System.out::println);
+		 }));
+		 
+		 Map<Boolean,List<Employee>> resPar = ls.stream()
+				 .collect(Collectors.partitioningBy( e-> e.getSalary()>50000));
+		 
+		 resPar.forEach(((str,data)->{
+			 System.out.println(str);
+			 data.forEach(System.out::println);
+		 }));
+		
 	 }
 	 
 	 static void min(List<Integer> ls) {
@@ -64,16 +75,21 @@ public class terminalOperations {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 List<Integer> ls = Arrays.asList(1,2,3,4,5,6,7,8,8,8);
+		 
+		 Main obj = new Main();
+		 
+		 List<Employee> empList = obj.getEmpList();
+		 collect(empList);
 	     
 		 long count = ls.stream().count();
-	     System.out.println(count);
-		  reduce(ls);
-		  collect(ls);
-		  min(ls);
-		  max(ls);
-		  findFirst(ls);
-		  anyMatch(ls);
-		  sum(ls);
+	     //System.out.println(count);
+//		  reduce(ls);
+//		  collect(ls);
+//		  min(ls);
+//		  max(ls);
+//		  findFirst(ls);
+//		  anyMatch(ls);
+//		  sum(ls);
 	}
 
 }

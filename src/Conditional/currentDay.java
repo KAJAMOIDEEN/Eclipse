@@ -4,8 +4,8 @@ public class currentDay {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-    String day = "twoh";
-    switch(day) {
+    String day = "three";
+    switch("three44") {
     case "one":
     	System.out.println("Sunday");
     	break;

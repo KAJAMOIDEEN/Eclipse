@@ -4,25 +4,25 @@ public class numbersLoop {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-      int i = 0; 
-      while(i<10) {
-    	  i++;
-    	  if(i==5) {
-    		continue;
-    	  }
-    	  System.out.println(i);
-    	  
-        }
-      
-//      do {
+//      for(int i=9;i>0;i--) {
 //    	  System.out.println(i);
+ //     }
+		int i=0;
+//      while(i==10) {
 //    	  i++;
-//      }
-//      while(i<0);
+//    	  if(i==5) {
+//    		 continue;
+//    	  }
+//    	  System.out.println(i);
+//    	 
+//        }
       
-//      for(int x=0;x<5;x++) {
-//    	  System.out.println(x);
-//      }
+      do {
+    	  System.out.println(i);
+    	  i++;
+      }
+      while(i==0);
+      
 	}
 
 }

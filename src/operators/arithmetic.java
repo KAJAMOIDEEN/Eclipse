@@ -15,6 +15,8 @@ public class arithmetic {
        //preIncrement
        System.out.print("Post Incre:");
        //a--;
+       --a;
+       a--;
        System.out.println(--a);
        //post Increment
       // a++;

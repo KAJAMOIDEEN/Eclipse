@@ -6,7 +6,7 @@ public class Main  {
 		//m.show();
 		Encapsulation obj = new Encapsulation();
 		obj.username = "John";
-        obj.setPassword("098765");
+        obj.setPassword("0987");
 		
 		System.out.println("User Name:"+obj.username+"\n"+"Password:"+obj.getPassword());
 		

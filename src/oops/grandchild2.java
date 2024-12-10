@@ -7,8 +7,8 @@ public class grandchild2 extends child {
       grandchild2 obj = new grandchild2();
       
       obj.land1();
-      obj.land2();
       obj.land3();
+     
 	}
 
 }

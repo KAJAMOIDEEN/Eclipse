@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import collections.Arraylist;
+import collections.list;
 
 public class convertToStream {
 

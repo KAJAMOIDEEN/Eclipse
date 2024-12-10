@@ -16,19 +16,24 @@ public class singleArr {
        
        
        int arrData[] = {10,20,30,40,50,60}; // arrData
-       
-       int len = arrData.length;
-      // System.out.println(len);
+       System.out.println(arrData);
+         int len = arrData.length;
+//       System.out.println(len);
        
 //       for(int i=0;i<len;i++)
 //       arr[i] = arrData[i];
 //       
        for(int i=0;i<len;i++) {
-    	   System.out.println(arrData[i]);
+    	   if(arrData[i]==50) {
+    		   System.out.println("50 is present");
+    	   }
+    	   else {
+    		   continue;
+    	   }
        }
-       for(Integer x:arrData) {
-    	   System.out.println(x);
-       }
+//       for(Integer x:arrData) {
+//    	   System.out.println(x);
+//       }
     	   
 	}
 

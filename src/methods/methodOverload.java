@@ -1,4 +1,4 @@
-package mthods;
+package methods;
 
 public class methodOverload {
 	  static int plusMethod(int x, int y) {

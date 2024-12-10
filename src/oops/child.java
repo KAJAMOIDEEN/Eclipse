@@ -5,9 +5,7 @@ public class child extends dad {
 	public void land3() {
 		System.out.println("madurai");
 	}
-//	protected void show() {
-//		System.out.println("show");
-//	}
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,7 +14,6 @@ public class child extends dad {
 	  obj.land1();
 	  obj.land2();
 	  obj.land3();
-	  obj.show();
 	  System.out.println(obj.value);
 
 	}
