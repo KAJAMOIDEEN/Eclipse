@@ -1,6 +1,7 @@
 package oops;
 
 public class methodOverload {
+
 	
 	static void add() {
 		System.out.println("Add method");
@@ -14,8 +15,9 @@ public class methodOverload {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+	 
        add();
-       add(8,9);
+       add(9,8);
        add(9,8,7);
 	}
 

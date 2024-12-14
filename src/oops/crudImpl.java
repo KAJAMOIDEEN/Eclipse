@@ -1,6 +1,6 @@
 package oops;
 
-abstract class crudImpl implements crud {
+class crudImpl implements crud {
     
 	public void create() {
 		System.out.println("created");
@@ -24,13 +24,10 @@ abstract class crudImpl implements crud {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        crudImpl obj = new crudImpl() {
-
-			
-        	
-        };
+        crudImpl obj = new crudImpl();
+        obj.read();
         
-        obj.create();
+       
         
 	}
 

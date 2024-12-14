@@ -5,7 +5,8 @@ import java.util.*;
 public class list {
 	
 	static void arrayList() {
-		ArrayList<Integer> list = new ArrayList();
+		int[] arr = {9,8,5,9,5,9};
+		ArrayList<Integer> list = new ArrayList<>();
 		list.add(10);
 		list.add(60);
 		list.add(50);
