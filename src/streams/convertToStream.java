@@ -12,7 +12,7 @@ public class convertToStream {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		 int[] primitiveArr = {1,2,3,4};
+		 int[] primitiveArr = {1,2,3,4,5,7,7,5,4};		 
 		 
 	     final IntStream intStream = Arrays.stream(primitiveArr);
 	     intStream.forEach(i->System.out.println(i));

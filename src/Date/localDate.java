@@ -13,7 +13,7 @@ public class localDate {
      
      LocalDateTime ob = LocalDateTime.now();
      
-     DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
+     DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
      String formattedDate = ob.format(myFormatObj);
      

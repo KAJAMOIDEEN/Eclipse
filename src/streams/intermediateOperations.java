@@ -31,7 +31,7 @@ public class intermediateOperations {
 				.collect(Collectors.toList());
 	}
 
-	static void distinct(List<Integer> ls) {
+	static void distinct(List<Integer> ls) { 
 		ls.stream().distinct() // remove the duplicate element
 				.forEach(System.out::println);
 	}
@@ -55,14 +55,22 @@ public class intermediateOperations {
 
 		List<List<String>> lsofLs = Arrays.asList(Arrays.asList("hello", "java", "world"),
 				Arrays.asList("hello", "Python", "world"), Arrays.asList("hello", "C++", "world"));
-
-//		filter(ls);
-//		map(strLs);
-//		flatMap(lsofLs);
+        
+		System.out.println(".....Filter....");
+		filter(ls);
+		System.out.println(".....Map....");
+		map(strLs);
+		System.out.println(".....Flat Map....");
+		flatMap(lsofLs);
+		System.out.println(".....Peek....");
 		peek(ls);
-//		distinct(ls);
-//		sorted(strLs);
-//		skip(ls);
-//		limit(ls);
+		System.out.println(".....Distinct....");
+		distinct(ls);
+		System.out.println(".....Sorted....");
+		sorted(strLs);
+		System.out.println(".....Skip....");
+		skip(ls);
+		System.out.println(".....Limit....");
+		limit(ls);
 	}
 }
