@@ -39,9 +39,9 @@ public class terminalOperations {
 	}
 
 	static void max(List<Employee> ls) {
-		 final Optional<Integer> res =ls.stream().map(Employee::getSalary).max(Comparator.naturalOrder()) ;
-		 
-		 System.out.println(res.get());
+		final Optional<Integer> res = ls.stream().map(Employee::getSalary).max(Comparator.naturalOrder());
+
+		System.out.println(res.get());
 	}
 
 	static void findFirst(List<Integer> ls) {

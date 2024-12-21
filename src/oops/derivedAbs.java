@@ -15,7 +15,7 @@ public class derivedAbs extends abs {
 		// TODO Auto-generated method stub
 		System.out.println("chennai");
 	}
-	
+
 	@Override
 	void land9() {
 		// TODO Auto-generated method stub
@@ -25,10 +25,8 @@ public class derivedAbs extends abs {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		derivedAbs obj = new derivedAbs(9, 8);
-		System.out.println(a+b);
+		System.out.println(a + b);
 		obj.land5();
 	}
-
-	
 
 }

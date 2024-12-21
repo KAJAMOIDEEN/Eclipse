@@ -1,7 +1,7 @@
 package oops;
 
-public class grandchild1 extends child implements landInfo,landInfo2{
-	
+public class grandchild1 extends child implements landInfo, landInfo2 {
+
 	@Override
 	public void land6() {
 		// TODO Auto-generated method stub
@@ -19,19 +19,14 @@ public class grandchild1 extends child implements landInfo,landInfo2{
 		// TODO Auto-generated method stub
 		System.out.println("chennai");
 	}
-  
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-      grandchild1 obj = new grandchild1();
-      
-      obj.land4();
-      obj.land5();
-      obj.land6();
+		grandchild1 obj = new grandchild1();
+
+		obj.land4();
+		obj.land5();
+		obj.land6();
 	}
 
-	
-
-
-	
 }

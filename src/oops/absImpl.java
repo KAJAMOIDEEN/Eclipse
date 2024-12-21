@@ -1,7 +1,6 @@
 package oops;
 
-public class absImpl extends abs{
-	
+public class absImpl extends abs {
 
 	@Override
 	void land5() {
@@ -21,8 +20,7 @@ public class absImpl extends abs{
 		obj.land5();
 		obj.land9();
 		obj.land8();
-		
-	}
 
+	}
 
 }

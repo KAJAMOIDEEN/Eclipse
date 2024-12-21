@@ -31,7 +31,7 @@ public class intermediateOperations {
 				.collect(Collectors.toList());
 	}
 
-	static void distinct(List<Integer> ls) { 
+	static void distinct(List<Integer> ls) {
 		ls.stream().distinct() // remove the duplicate element
 				.forEach(System.out::println);
 	}
@@ -55,7 +55,7 @@ public class intermediateOperations {
 
 		List<List<String>> lsofLs = Arrays.asList(Arrays.asList("hello", "java", "world"),
 				Arrays.asList("hello", "Python", "world"), Arrays.asList("hello", "C++", "world"));
-        
+
 		System.out.println(".....Filter....");
 		filter(ls);
 		System.out.println(".....Map....");

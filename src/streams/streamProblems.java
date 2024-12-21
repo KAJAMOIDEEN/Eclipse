@@ -52,9 +52,8 @@ public class streamProblems {
 
 	// find employee name of maximum salary
 	static void findMaxSalaryEmpName(List<Employee> list) {
-		 final Optional<String> name = list.stream()
-				.sorted(Comparator.comparing(Employee::getSalary).reversed())
-				.map(each->each.getFirstName()).findFirst();
+		final Optional<String> name = list.stream().sorted(Comparator.comparing(Employee::getSalary).reversed())
+				.map(each -> each.getFirstName()).findFirst();
 		System.out.println("....employee name of maximum salary....");
 		System.out.println(name.get());
 	}
@@ -78,9 +77,9 @@ public class streamProblems {
 		// ---------------------------------------------
 
 		findMaxSalary(empList);
-		
+
 		// ---------------------------------------------
-		
+
 		findMaxSalaryEmpName(empList);
 
 	}

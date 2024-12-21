@@ -2,9 +2,9 @@ package oops;
 
 abstract class Animal {
 	public abstract void animalSound();
-	
+
 	public void sleep() {
-	    System.out.println("Zzz");
-	  }
- 
+		System.out.println("Zzz");
+	}
+
 }
