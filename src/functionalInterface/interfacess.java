@@ -18,11 +18,15 @@ public class interfacess {
       consum.accept(employee);
       System.out.println(employee.getEmpName());
       
-      //Input & Output (Apply Method)
+      //Only one Input & returns Output (Apply Method)
       Function<Employee,String> func = f -> "Employeer Name:"+f.getEmpName() + "\nEmployeer Salary:" + f.getEmpSalary();
       System.out.println(func.apply(employee));
       
-      ///No input only supply (get method)
+    //two Input & returns Output (Apply Method)
+      BiFunction<Employee,Employee,String> biFunc = (f,k) -> "Employeer Name:"+f.getEmpName() + "\nEmployeer Salary:" + k.getEmpSalary();
+      System.out.println(biFunc.apply(employee,employee));
+      
+      ///No input and returns result(get method)
       Supplier<String> supl = () -> employee.getEmpLocation();
       System.out.println(supl.get());
       

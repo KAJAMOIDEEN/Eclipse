@@ -29,7 +29,11 @@ public class child2 extends dad implements landInfo,landInfo2{
        obj.land4();
        obj.land5();
        obj.land6();
+       obj.method();
+       landInfo.myLand();
 	}
+
+	
 
 	
 

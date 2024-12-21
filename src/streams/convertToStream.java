@@ -14,7 +14,7 @@ public class convertToStream {
 		// TODO Auto-generated method stub
 		 int[] primitiveArr = {1,2,3,4,5,7,7,5,4};		 
 		 
-	     final IntStream intStream = Arrays.stream(primitiveArr);
+	   IntStream intStream = Arrays.stream(primitiveArr);
 	     intStream.forEach(i->System.out.println(i));
 	     
 	     //wrapper 
