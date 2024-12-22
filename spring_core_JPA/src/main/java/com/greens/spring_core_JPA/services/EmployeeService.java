@@ -7,6 +7,7 @@ import com.greens.spring_core_JPA.model.Employee;
 public interface EmployeeService {
     ArrayList<Employee> findAllEmployee();
     Employee findAllEmployeeByID(long id);
+    Employee update(long id,Employee emp);
     Employee  addEmployee(Employee emp);
     void deleteById(long id);
     void deleteAllData();
