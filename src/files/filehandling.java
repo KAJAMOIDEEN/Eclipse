@@ -7,7 +7,7 @@ public class filehandling {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		File obj = new File("myNewFile.txt");
+		File obj = new File("myNewFileee.txt");
 
 		if (obj.createNewFile())
 			System.out.println("File is Created...");

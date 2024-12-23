@@ -22,7 +22,7 @@ public class fileReading {
 
 	static void type2() {
 		try {
-			File file = new File("myNewFile.txt");
+			File file = new File("myNewFileee.txt");
 			Scanner myReader = new Scanner(file);
 			while (myReader.hasNextLine()) {
 				System.out.println(myReader.next());
@@ -36,7 +36,6 @@ public class fileReading {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		// TODO Auto-generated method stub
-		type1();
-
+		type2();
 	}
 }
