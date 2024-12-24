@@ -1,17 +1,8 @@
 package streams;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import datatype.datas;
 
 public class streamProblems {
 
@@ -32,21 +23,21 @@ public class streamProblems {
 	static void findConcurrentValue(int[] arr) {
 
 		Set<Integer> set = new HashSet<Integer>();
-		System.out.println("....Repeated/duplicate value in array....");
+		System.out.println("\n....Repeated/duplicate value in array....");
 		Arrays.stream(arr).filter(n -> !set.add(n)).forEach(System.out::println);
 	}
 
 	// convert list to map
 	static void convertListToMap(List<Employee> list) {
 		Map<String, String> map = list.stream().collect(Collectors.toMap(Employee::getEmpId, Employee::getFirstName));
-		System.out.println("....converted list to map....");
+		System.out.println("\n....converted list to map....");
 		map.entrySet().stream().forEach(System.out::println);
 	}
 
 	// find maximum employee salary
 	static void findMaxSalary(List<Employee> list) {
 		final Optional<Integer> maximum = list.stream().map(Employee::getSalary).max(Comparator.naturalOrder());
-		System.out.println("....Maximum Employee Salary....");
+		System.out.println("\n....Maximum Employee Salary....");
 		System.out.println(maximum.get());
 	}
 
@@ -54,8 +45,20 @@ public class streamProblems {
 	static void findMaxSalaryEmpName(List<Employee> list) {
 		final Optional<String> name = list.stream().sorted(Comparator.comparing(Employee::getSalary).reversed())
 				.map(each -> each.getFirstName()).findFirst();
-		System.out.println("....employee name of maximum salary....");
+		System.out.println("\n....employee name of maximum salary....");
 		System.out.println(name.get());
+	}
+
+	// find the count of each character in string
+	static void countEachCharString(List<Employee> list) {
+		System.out.println("\n....find the count of each character in string....");
+		String name = list.stream().map(i -> i.getFirstName()).findFirst().get();
+		System.out.println("String is:"+name);
+		Map<String, Long> map = Arrays.stream(name.split(""))
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+		System.out.println(map);
+
 	}
 
 	public static void main(String[] args) {
@@ -81,6 +84,10 @@ public class streamProblems {
 		// ---------------------------------------------
 
 		findMaxSalaryEmpName(empList);
+
+		// ---------------------------------------------
+
+		countEachCharString(empList);
 
 	}
 
