@@ -88,6 +88,7 @@ public class terminalOperations {
 		anyMatch(ls);
 		System.out.println("....Sum....");
 		sum(ls);
+		
 	}
 
 }

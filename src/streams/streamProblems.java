@@ -53,12 +53,25 @@ public class streamProblems {
 	static void countEachCharString(List<Employee> list) {
 		System.out.println("\n....find the count of each character in string....");
 		String name = list.stream().map(i -> i.getFirstName()).findFirst().get();
-		System.out.println("String is:"+name);
+		System.out.println("String is:" + name);
 		Map<String, Long> map = Arrays.stream(name.split(""))
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
 		System.out.println(map);
 
+	}
+
+	// find the second max in integer array
+	static void secondMax(int[] arr) {
+		int res = Arrays.stream(arr).skip(1).max().getAsInt();
+		System.out.println("\nSecond Maximum: " + res);
+	}
+
+	// find the longest sentence in the string
+	static void longestSentence(String str) {
+		System.out.println("\n....find the longest sentence in the string....");
+		String res = Arrays.stream(str.split(" ")).max(Comparator.naturalOrder()).get();
+		System.out.println(res);
 	}
 
 	public static void main(String[] args) {
@@ -89,6 +102,14 @@ public class streamProblems {
 
 		countEachCharString(empList);
 
+		// ----------------------------------------------
+
+		secondMax(primitiveArr);
+
+		// -----------------------------------------------
+
+		String str = "java is powerful language";
+		longestSentence(str);
 	}
 
 }
