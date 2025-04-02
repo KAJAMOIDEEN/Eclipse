@@ -17,4 +17,10 @@ public class HomeController {
 		String products = restTemplate.getForObject("http://localhost:9099/products", String.class);
 		return products;
 	}
+	
+	@GetMapping("/map")
+	public String map() {
+		String maps = restTemplate.getForObject("https://www.google.com/maps/", String.class);
+		return maps;
+	}
 }
