@@ -1,4 +1,4 @@
-package arrays;
+package dsa_problems;
 
 public class findMaxArrValue {
 

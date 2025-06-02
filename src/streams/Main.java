@@ -1,12 +1,57 @@
 package streams;
 
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
+import Date.localDate;
+
 public class Main {
+
 	public static void main(String[] args) {
 
-		List<Employee> empList = getEmpList();
+		Main obj = new Main();
+		List<Orders> orderList = obj.getOrderList();
+		// orderList.stream().forEach(System.out::println);
+		for (Orders order : orderList) {
+			System.out.println("Order ID: " + order.getOrder_id());
+			System.out.println("Order Date: " + order.getOrder_date());
+			System.out.println("Products:");
+			for (Product p : order.getProduct_name()) {
+				System.out.println(" - " + p.getProduct_name() + "\t" + p.getPrice());
+			}
+			System.out.println("------");
+		}
+
+	}
+
+	public static List<Product> getProductList() {
+
+		return Arrays.asList(new Product(1, "Laptop", 120000.000), new Product(2, "Smartphone", 450000.00),
+				new Product(3, "TV", 80000.00), new Product(4, "AC", 60000.00));
+	}
+
+	public static List<Product> getProductList2() {
+
+		return Arrays.asList(new Product(1, "Laptop", 120000.000), new Product(2, "Smartphone", 450000.00));
+	}
+
+	public static List<Product> getProductList3() {
+
+		return Arrays.asList(new Product(1, "Laptop", 120000.000));
+	}
+
+	public static List<Orders> getOrderList() {
+		// TODO Auto-generated method stub
+		LocalDate date1 = LocalDate.of(2025, 05, 13);
+		LocalDate date2 = LocalDate.of(2025, 04, 30);
+		LocalDate date3 = LocalDate.of(2025, 05, 03);
+
+		return Arrays.asList(new Orders(101, date1, getProductList()), new Orders(102, date2, getProductList2()),
+				new Orders(103, date3, getProductList3()));
 	}
 
 	public static List<Employee> getEmpList() {

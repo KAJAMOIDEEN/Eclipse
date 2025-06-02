@@ -1,8 +1,10 @@
 package streams;
 
+import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class streamProblems {
 
@@ -49,6 +51,14 @@ public class streamProblems {
 		System.out.println(name.get());
 	}
 
+	// find employee name of Second maximum salary
+	static void findSecondMaxSalaryEmpName(List<Employee> list) {
+		final Optional<String> name = list.stream().sorted(Comparator.comparing(Employee::getSalary).reversed())
+				.map(each -> each.getFirstName()).skip(1).findFirst();
+		System.out.println("\n....employee name of Second maximum salary....");
+		System.out.println(name.get());
+	}
+
 	// find the count of each character in string
 	static void countEachCharString(List<Employee> list) {
 		System.out.println("\n....find the count of each character in string....");
@@ -74,11 +84,56 @@ public class streamProblems {
 		System.out.println(res);
 	}
 
+	// remove duplicate and sort employee name in employee class
+	static void sortEmployee(List<Employee> list) {
+		System.out.println("\n....remove duplicate and sort employee name in employee class....");
+		Stream<Employee> res = list.stream().distinct().sorted(Comparator.comparing(Employee::getFirstName));
+		res.forEach(i -> System.out.println(i.getFirstName()));
+	}
+
+	// Find sum of Salary
+	static void sumOfSalary(List<Employee> ls) {
+		System.out.println("\n....Sum of Employee Salary....");
+		int sum = ls.stream().map(i -> i.getSalary()).mapToInt(Integer::intValue).sum();
+		System.out.println("Sum of Salary:" + sum);
+	}
+
+	// Find product name of Given Date
+	static void findProductNameOfGivenDate(List<Orders> ordersList,LocalDate date) {
+		System.out.println("\n....Find the Product name of Given Date....");
+		ordersList.stream()
+	        .filter(order -> order.getOrder_date().equals(date))
+	        .flatMap(order -> order.getProduct_name().stream())
+	        .map(Product->"Product Name:"+Product.getProduct_name()+"\t\t Price:"+Product.getPrice())
+	        .forEach(System.out::println);
+	}
+	
+	//find maximum price of the product
+	static void findMaxProductPrice(List<Product> productList) {
+	    System.out.println("\n....Find the Maximum Price of the Product....");
+	    Optional<Double> maxPrice = productList.stream()
+	                                           .map(Product::getPrice)
+	                                           .max(Comparator.naturalOrder());
+
+	    if (maxPrice.isPresent()) {
+	        System.out.println("Maximum Product Price: " + maxPrice.get());
+	    } else {
+	        System.out.println("Product list is empty or no prices available.");
+	    }
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		Main obj = new Main();
 		List<Employee> empList = obj.getEmpList();
+		List<Product> productList = obj.getProductList();
+		List<Orders> ordersList = obj.getOrderList();
+		
+	    Optional<LocalDate> customDate = ordersList.stream().filter(i->i.getOrder_id()==101).map(i->i.getOrder_date()).findFirst();
+	    LocalDate date = customDate.get();
+				
+		// ---------------------------------------------
 		groupedCount(empList);
 
 		// ---------------------------------------------
@@ -100,6 +155,10 @@ public class streamProblems {
 
 		// ---------------------------------------------
 
+		findSecondMaxSalaryEmpName(empList);
+
+		// ---------------------------------------------
+
 		countEachCharString(empList);
 
 		// ----------------------------------------------
@@ -110,6 +169,23 @@ public class streamProblems {
 
 		String str = "java is powerful language";
 		longestSentence(str);
+
+		// -----------------------------------------------
+
+		sortEmployee(empList);
+
+		// -----------------------------------------------
+
+		sumOfSalary(empList);
+		
+		// -----------------------------------------------
+		
+		findProductNameOfGivenDate(ordersList,date);
+		
+		// -----------------------------------------------
+		
+		findMaxProductPrice(productList);
+
 	}
 
 }
