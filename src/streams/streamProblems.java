@@ -90,7 +90,8 @@ public class streamProblems {
 		Stream<Employee> res = list.stream().distinct().sorted(Comparator.comparing(Employee::getFirstName));
 		res.forEach(i -> System.out.println(i.getFirstName()));
 	}
-
+				
+				
 	// Find sum of Salary
 	static void sumOfSalary(List<Employee> ls) {
 		System.out.println("\n....Sum of Employee Salary....");

@@ -3,11 +3,10 @@ package dsa_problems;
 public class findMaxArrValue {
 
 	// Array declared
-    static int arr[] = {200, 10000, 20, 4, 100}; 
+    static int arr[] = {200, 10000, 20000, 4, 100}; 
     
     // Method to find maximum in arr[] 
     static int largest() {
-      
         int i; 
         
         // Initialize maximum element 

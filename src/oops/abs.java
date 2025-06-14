@@ -20,7 +20,10 @@ abstract class abs {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+        
+		//anonymous inner class is a type of inner class without a name.
+		/*It is used to provide the implementation of an abstract class or interface on the fly, 
+		  typically where you need a short implementation, often as an argument or variable initialization.*/
 		abs obj = new abs() {
 
 			@Override

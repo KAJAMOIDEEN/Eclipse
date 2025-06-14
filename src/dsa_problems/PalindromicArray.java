@@ -9,8 +9,8 @@ public class PalindromicArray {
 		boolean res = false;
 		String strArr = Arrays.toString(arr).replaceAll("\\[|\\]|,|\\s", "");
 		char ch[] = strArr.toCharArray();
-		for(char i : ch) {
-		System.out.println(i);
+		for(int i=ch.length-1;i>=0;i--) {
+		System.out.println(ch[i]);
 		}
 		
 		return res;

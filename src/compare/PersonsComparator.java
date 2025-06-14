@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class PersonsComparator {
+public class PersonsComparator implements Comparator<Persons>{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method
@@ -16,7 +16,7 @@ public class PersonsComparator {
 		al.add(new Persons("Kumar", 29));
 		al.add(new Persons("Karthik", 51));
 
-		// sort by using comparator
+		// sort by using comparator by anonymous inner class
 		al.sort(new Comparator<Persons>() {
 
 			@Override
@@ -37,5 +37,11 @@ public class PersonsComparator {
 			System.out.println(i.getName() + " " + i.getAge());
 		}
 
+	}
+
+	@Override
+	public int compare(Persons o1, Persons o2) {
+		// TODO Auto-generated method stub
+		return o1.getName().compareTo(o2.getName());
 	}
 }

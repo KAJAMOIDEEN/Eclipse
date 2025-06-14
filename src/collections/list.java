@@ -13,15 +13,15 @@ public class list {
 		list.add(40);
 		list.add(40);
 
-		System.out.println("Before" + list.get(3));
-		System.out.println("Size" + list.size());
+		//System.out.println("Before" + list.get(3));
+		//System.out.println("Size" + list.size());
 		// System.out.println(list.set(3,68));
 		// list.remove(3);
 		// list.clear();
 
-		// Collections.sort(list);
+		Collections.sort(list);
 
-		list.stream().distinct().forEach(System.out::println);
+		//list.stream().distinct().forEach(System.out::println);
 
 		for (int i : list) {
 			System.out.println(i);

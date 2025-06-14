@@ -8,6 +8,7 @@ public class lamdas {
 		int res = f.sqaure(6);
 		f.print();
 		System.out.println(res);
+		FunctionalInterfacess.show();
 	}
 
 }
