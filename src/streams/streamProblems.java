@@ -3,6 +3,7 @@ package streams;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -90,8 +91,7 @@ public class streamProblems {
 		Stream<Employee> res = list.stream().distinct().sorted(Comparator.comparing(Employee::getFirstName));
 		res.forEach(i -> System.out.println(i.getFirstName()));
 	}
-				
-				
+
 	// Find sum of Salary
 	static void sumOfSalary(List<Employee> ls) {
 		System.out.println("\n....Sum of Employee Salary....");
@@ -100,27 +100,36 @@ public class streamProblems {
 	}
 
 	// Find product name of Given Date
-	static void findProductNameOfGivenDate(List<Orders> ordersList,LocalDate date) {
+	static void findProductNameOfGivenDate(List<Orders> ordersList, LocalDate date) {
 		System.out.println("\n....Find the Product name of Given Date....");
-		ordersList.stream()
-	        .filter(order -> order.getOrder_date().equals(date))
-	        .flatMap(order -> order.getProduct_name().stream())
-	        .map(Product->"Product Name:"+Product.getProduct_name()+"\t\t Price:"+Product.getPrice())
-	        .forEach(System.out::println);
+		ordersList.stream().filter(order -> order.getOrder_date().equals(date))
+				.flatMap(order -> order.getProduct_name().stream())
+				.map(Product -> "Product Name:" + Product.getProduct_name() + "\t\t Price:" + Product.getPrice())
+				.forEach(System.out::println);
 	}
-	
-	//find maximum price of the product
-	static void findMaxProductPrice(List<Product> productList) {
-	    System.out.println("\n....Find the Maximum Price of the Product....");
-	    Optional<Double> maxPrice = productList.stream()
-	                                           .map(Product::getPrice)
-	                                           .max(Comparator.naturalOrder());
 
-	    if (maxPrice.isPresent()) {
-	        System.out.println("Maximum Product Price: " + maxPrice.get());
-	    } else {
-	        System.out.println("Product list is empty or no prices available.");
-	    }
+	// find maximum price of the product
+	static void findMaxProductPrice(List<Product> productList) {
+		System.out.println("\n....Find the Maximum Price of the Product....");
+		Optional<Double> maxPrice = productList.stream().map(Product::getPrice).max(Comparator.naturalOrder());
+
+		if (maxPrice.isPresent()) {
+			System.out.println("Maximum Product Price: " + maxPrice.get());
+		} else {
+			System.out.println("Product list is empty or no prices available.");
+		}
+	}
+
+	// Merge two list and sort without duplicate
+	static void MergeTwoListandSort(List<Integer> list1,List<Integer> list2) {
+		System.out.println("\n....Merge two list and sort without duplicate....");
+		List<Integer> ls = Stream.concat(list1.stream(), list2.stream())
+				.distinct()
+				.sorted()
+				.collect(Collectors.toList());
+		
+		ls.forEach(System.out::println);
+		
 	}
 
 	public static void main(String[] args) {
@@ -130,10 +139,13 @@ public class streamProblems {
 		List<Employee> empList = obj.getEmpList();
 		List<Product> productList = obj.getProductList();
 		List<Orders> ordersList = obj.getOrderList();
-		
-	    Optional<LocalDate> customDate = ordersList.stream().filter(i->i.getOrder_id()==101).map(i->i.getOrder_date()).findFirst();
-	    LocalDate date = customDate.get();
-				
+		List<Integer> list1 = new ArrayList(Arrays.asList(1,9,6,8,9));
+		List<Integer> list2 = new ArrayList(Arrays.asList(2,9,8,2,3));
+
+		Optional<LocalDate> customDate = ordersList.stream().filter(i -> i.getOrder_id() == 101)
+				.map(i -> i.getOrder_date()).findFirst();
+		LocalDate date = customDate.get();
+
 		// ---------------------------------------------
 		groupedCount(empList);
 
@@ -178,14 +190,18 @@ public class streamProblems {
 		// -----------------------------------------------
 
 		sumOfSalary(empList);
-		
+
 		// -----------------------------------------------
-		
-		findProductNameOfGivenDate(ordersList,date);
-		
+
+		findProductNameOfGivenDate(ordersList, date);
+
 		// -----------------------------------------------
-		
+
 		findMaxProductPrice(productList);
+
+		// -----------------------------------------------
+
+		MergeTwoListandSort(list1,list2);
 
 	}
 

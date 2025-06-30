@@ -11,7 +11,8 @@ public class testClass {
      String str = "HelloH"; // e
      String arr[] = str.split("");
      Set<String> set = new HashSet<>();
-     Arrays.stream(arr).filter(i->set.add(i)).forEach(System.out::println);
+     Arrays.stream(arr).filter(i->!set.add(i)).forEach(System.out::println);
+    // Arrays.stream(arr).filter(i->!set.add(i)).forEach(System.out::println);
 	}
 
 }
