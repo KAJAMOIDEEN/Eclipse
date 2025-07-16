@@ -31,10 +31,9 @@ public class FindConsequenceString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String str = "ABCBDDEFEFGGH";
+		String str = "ABCBDDEFEFFGGH";
 		//System.out.println(findConseq(str));
-		System.out.println(findFirstConseq(str));
-		
+		System.out.println(findFirstConseq(str));		
 	}
 
 }

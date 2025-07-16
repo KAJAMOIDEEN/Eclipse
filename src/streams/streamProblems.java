@@ -67,7 +67,7 @@ public class streamProblems {
 		System.out.println("String is:" + name);
 		Map<String, Long> map = Arrays.stream(name.split(""))
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
+        
 		System.out.println(map);
 
 	}

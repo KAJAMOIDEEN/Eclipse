@@ -14,9 +14,9 @@ public class rotateArray {
 	}
 
 	static void rotateArr(int[] arr, int d) {
-		reverse(arr, 0, d - 1);
-		reverse(arr, d, arr.length - 1);
-		int[] res = reverse(arr, 0, arr.length - 1);
+		reverse(arr, 0, arr.length - 1);
+		int[] res = reverse(arr, d, arr.length - 1);
+		 //= reverse(arr, 0, arr.length - 1);
 		for (int x : res) {
 			System.out.print(" ");
 			System.out.print(x);
@@ -27,7 +27,7 @@ public class rotateArray {
 	public static void main(String args[]) {
 
 		int[] arr = { 1,2,3,4,5,6,7 }; // 3,4,5,1,2
-		int t = 3;
+		int t = 1;
 		rotateArr(arr, t);
 	}
 
