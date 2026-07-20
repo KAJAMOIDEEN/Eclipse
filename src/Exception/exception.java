@@ -8,7 +8,6 @@ public class exception { // compile time - user error- and runtime errors
 		int[] arr = { 9, 8, 7 };
 
 		try {
-
 			// int b = 0;
 			System.out.println(arr[0]);
 		} catch (Exception e) {

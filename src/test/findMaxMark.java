@@ -1,5 +1,6 @@
 package test;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Map;
 import java.util.TreeMap;
@@ -30,18 +31,6 @@ public class findMaxMark {
 		
 		stuData.put("Mark",99);
 		stuData.put("Mark", 99);
-		
-		
-		List<Student>  list = new ArrayList<>();
-		Collections.sort(list);
-	    
-		
-		public int compare(Student o1,Student o2) {
-			return o1.mark.compareTo(o2.mark);
-		}
-		
-		
-		list.add(new Arrays.asList('A','B'));
 		
 	}
 

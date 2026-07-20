@@ -1,11 +1,6 @@
 package collections;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 public class map {
 
@@ -56,7 +51,10 @@ public class map {
 		hm.put(4, "Ragu");
 
 		// hm.keySet().stream().forEach(i->System.out.println(i));
-		hm.entrySet().stream().sorted((i1, i2) -> i1.getValue().compareTo(i2.getValue()))
+//		hm.entrySet().stream().sorted((i1, i2) -> i1.getValue().compareTo(i2.getValue()))
+//				.forEach((i) -> System.out.println(i.getValue()));
+
+		hm.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getValue))
 				.forEach((i) -> System.out.println(i.getValue()));
 
 	}

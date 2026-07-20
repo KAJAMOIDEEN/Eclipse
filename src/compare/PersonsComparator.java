@@ -17,18 +17,18 @@ public class PersonsComparator implements Comparator<Persons>{
 		al.add(new Persons("Karthik", 51));
 
 		// sort by using comparator by anonymous inner class
-		al.sort(new Comparator<Persons>() {
-
-			@Override
-			public int compare(Persons o1, Persons o2) {
-				// TODO Auto-generated method stub
-				return o1.getName().compareTo(o2.getName());
-			}
-
-		});
+//		al.sort(new Comparator<Persons>() {
+//
+//			@Override
+//			public int compare(Persons o1, Persons o2) {
+//				// TODO Auto-generated method stub
+//				return o1.getName().compareTo(o2.getName());
+//			}
+//
+//		});
 
 		// sort by using lambda
-		al.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
+//		al.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
 
 		// using comparing
 		al.sort(Comparator.comparing(Persons::getName).reversed());

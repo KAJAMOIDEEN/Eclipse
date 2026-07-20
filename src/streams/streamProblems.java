@@ -132,6 +132,14 @@ public class streamProblems {
 		
 	}
 
+
+	//Find Duplicates in Arrays of List
+	static List<int[]> findDuplicatesInArratOfList(List<Integer> list1){
+		List<int[]> arrLs = new ArrayList<>();
+//		list1.stream().distinct().forEach(i->arrLs.add(new int[Arrays.asList(i)]));
+		return arrLs;
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -203,6 +211,10 @@ public class streamProblems {
 
 		MergeTwoListandSort(list1,list2);
 
+		// ----------------------------------------------
+        for(int[] arr : findDuplicatesInArratOfList(list1)){
+			System.out.println(Arrays.toString(arr));
+		}
 	}
 
 }
