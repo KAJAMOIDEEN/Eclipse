@@ -135,9 +135,10 @@ public class streamProblems {
 
 	//Find Duplicates in Arrays of List
 	static List<int[]> findDuplicatesInArratOfList(List<Integer> list1){
-		List<int[]> arrLs = new ArrayList<>();
-//		list1.stream().distinct().forEach(i->arrLs.add(new int[Arrays.asList(i)]));
-		return arrLs;
+		List<int[]> ls = new ArrayList<>();
+		System.out.println("\n ......Find Duplicates in Arrays of List......");
+        ls.add(list1.stream().distinct().mapToInt(Integer::intValue).toArray());
+		return ls;
 	}
 
 	public static void main(String[] args) {
